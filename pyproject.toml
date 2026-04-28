@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omega-repro"
+version = "0.1.0"
+description = "A reproducible pipeline for testing structural concentration in high-Omega regimes."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{name = "Hiroaki Aizawa"}]
+license = {text = "MIT"}
+dependencies = ["pandas", "numpy", "matplotlib"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["omega_core*"]
